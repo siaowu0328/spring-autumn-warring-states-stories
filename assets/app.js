@@ -22,15 +22,35 @@
   const crumbs = items => `<div class="crumbs" aria-label="目前位置"><a href="#home">首頁</a>${items.map((item, i) => `<span aria-hidden="true">／</span>${item.url ? `<a href="${item.url}">${esc(item.label)}</a>` : `<span aria-current="page">${esc(item.label)}</span>`}`).join('')}</div>`;
   const kicker = s => `<div class="kicker">${esc(s)}</div>`;
   // 使用原創符號插畫作為閱讀提示，並非人物或史實場景的還原。
+  // 每個圖案都是概念符號，不代表歷史器物或場景的精確還原。
+  const storySymbols = {
+    '管鮑之交': '<path d="M24 69h39l-4 22H28zM77 69h39l-4 22H81zM34 69c-5-10 9-13 4-25M45 69c-5-10 9-13 4-25M87 69c-5-10 9-13 4-25M98 69c-5-10 9-13 4-25M58 105c10-12 20-12 30 0M19 105h102"/>',
+    '退避三舍': '<path d="M37 108V28m0 4h49l-10 15 10 15H37M23 108h29M61 83H112m-16-13 16 13-16 13"/><circle cx="36" cy="24" r="4"/>',
+    '臥薪嘗膽': '<path d="M25 94 95 57M33 104 104 67M25 74l79 30M30 61l77 29M20 110h100M73 26c0 9-10 15-10 25a10 10 0 0 0 20 0c0-10-10-16-10-25Z"/>',
+    '圍魏救趙': '<rect x="22" y="38" width="37" height="37"/><rect x="81" y="65" width="37" height="37"/><path d="M31 38V28h20v10M90 65V55h20v10M61 47c20-16 42-10 48 4m0 0-2-11m2 11-11-2M80 91c-20 13-39 9-45-5m0 0 2 11m-2-11 11 2"/>',
+    '完璧歸趙': '<circle cx="70" cy="70" r="45"/><circle cx="70" cy="70" r="16"/><path d="M28 70h-8m100 0h-8M70 28v-8m0 100v-8M38 38l6 6m52 52 6 6M102 38l-6 6M44 96l-6 6"/>',
+    '紙上談兵': '<path d="M35 29h59c8 0 13 6 13 13v60H48c-8 0-13-6-13-13zM35 32c0 9 6 13 13 13h59M48 45v57M59 59h35M59 69h35M59 79h22"/><circle cx="96" cy="92" r="10"/><path d="M90 92h12m-6-6v12"/>',
+    // 諸侯會盟：數面旗幟圍繞盟臺。
+    '九合一匡': '<path d="M27 104h86M38 104V89h64v15M51 89V76h38v13M70 76V28M70 30h29l-7 9 7 9H70M28 75V41m0 2h24l-6 8 6 8H28M112 75V41m0 2H88l6 8-6 8h24"/><circle cx="70" cy="25" r="3"/>',
+    // 老馬與歸途。
+    '老馬識途': '<path d="M43 90V66l-10-10 7-18 11-5 9-15 9 13 13 5 6 16-7 13H65l-7 25M45 41l14 8 9-4M49 90v12m27-12v12M35 103h53M91 86c9 3 15 9 19 18M92 70c12 2 21 8 27 18"/><circle cx="57" cy="41" r="1.5"/>',
+    // 水澤中的魚與乾裂的土地。
+    '竭澤而漁': '<path d="M20 45c9-6 17 6 26 0s17 6 26 0 17 6 26 0 17 6 22 1M20 54c9-6 17 6 26 0s17 6 26 0 17 6 26 0 17 6 22 1M42 77c10-12 27-15 41-3l12-7-3 14 3 13-12-7c-14 12-31 9-41-3l-9 7V70zM56 79h1M22 110h96M45 110l6-10 6 10M76 110l6-9 7 9"/>',
+    // 鼎的三足與雙耳。
+    '問鼎輕重': '<path d="M42 51c-8-1-12-6-12-13 0-6 4-10 11-10h6v15M98 51c8-1 12-6 12-13 0-6-4-10-11-10h-6v15M39 49h62l-4 29c-2 12-12 19-27 19S45 90 43 78zM47 56h46M53 65h34M51 91l-5 20h12l5-14M89 91l5 20H82l-5-14M70 98v13"/>',
+    // 飛鳥與被收藏的弓。
+    '鳥盡弓藏': '<path d="M28 29c32 11 44 39 31 72M28 29l31 72M30 92l56-54M80 38h10v10M77 47l9-9M81 102h34M86 96v12M112 96v12M86 96h26M91 27c6-8 12-8 17 0 4-4 9-4 13 1M92 28l8 3 8-3"/>',
+    // 漸減的炊灶，提示馬陵故事中的減灶誘敵。
+    '因勢利導': '<path d="M23 100h94M30 91h21M59 91h21M88 91h21M32 89l3-11h12l3 11M61 89l3-11h12l3 11M90 89l3-11h12l3 11M41 71c-5-6 5-8 1-14M70 71c-5-6 5-8 1-14M99 71c-5-6 5-8 1-14M31 35h77m-12-11 12 11-12 11"/>',
+    // 成束荊枝，提示負荊請罪。
+    '負荊請罪': '<path d="M36 105 91 28M49 109 104 32M30 37l77 68M25 50l76 63M53 80l-10-3m18-8-1-11m10 0 11 2m-4-12 2-10M80 81l10-5m-18-5 1-10M58 98l-7 10m31-12 8 10M55 65l8 8m0-8-8 8M67 57l8 8m0-8-8 8"/>',
+    // 書簡與劍：出使與自薦。
+    '毛遂自薦': '<path d="M28 31h47v68H28zM34 25v80M70 25v80M40 43h23M40 53h23M40 63h18M40 73h21M102 24l8 12-8 52-8-52zM93 91h18M101 91v18M94 110h15"/><circle cx="102" cy="32" r="2"/>',
+    // 兩半相合的兵符，以斷面區分左右。
+    '竊符救趙': '<path d="M24 92V66l9-16 15-7 8-13 10 8v57H51l-5 10H34l-3-13zM116 92V66l-9-16-15-7-8-13-10 8v57h15l5 10h12l3-13zM66 38l4 6 4-6M66 50l4 6 4-6M66 62l4 6 4-6M66 74l4 6 4-6M38 60l8 3M102 60l-8 3M38 80h13M102 80H89"/><circle cx="46" cy="53" r="1.5"/><circle cx="94" cy="53" r="1.5"/>'
+  };
   const icon = title => {
-    let shape;
-    if (title.includes('管鮑')) shape = '<path d="M24 69h39l-4 22H28zM77 69h39l-4 22H81zM34 69c-5-10 9-13 4-25M45 69c-5-10 9-13 4-25M87 69c-5-10 9-13 4-25M98 69c-5-10 9-13 4-25"/><path d="M58 105c10-12 20-12 30 0M19 105h102"/>';
-    else if (title.includes('退避')) shape = '<path d="M37 108V28m0 4h49l-10 15 10 15H37M23 108h29M61 83H112m-16-13 16 13-16 13"/><circle cx="36" cy="24" r="4"/>';
-    else if (title.includes('臥薪')) shape = '<path d="M25 94 95 57M33 104 104 67M25 74l79 30M30 61l77 29M20 110h100"/><path d="M73 26c0 9-10 15-10 25a10 10 0 0 0 20 0c0-10-10-16-10-25Z"/>';
-    else if (title.includes('圍魏')) shape = '<rect x="22" y="38" width="37" height="37"/><rect x="81" y="65" width="37" height="37"/><path d="M31 38V28h20v10M90 65V55h20v10M61 47c20-16 42-10 48 4m0 0-2-11m2 11-11-2M80 91c-20 13-39 9-45-5m0 0 2 11m-2-11 11 2"/>';
-    else if (title.includes('完璧')) shape = '<circle cx="70" cy="70" r="45"/><circle cx="70" cy="70" r="16"/><path d="M28 70h-8m100 0h-8M70 28v-8m0 100v-8M38 38l6 6m52 52 6 6M102 38l-6 6M44 96l-6 6"/>';
-    else if (title.includes('紙上')) shape = '<path d="M35 29h59c8 0 13 6 13 13v60H48c-8 0-13-6-13-13zM35 32c0 9 6 13 13 13h59M48 45v57M59 59h35M59 69h35M59 79h22"/><circle cx="96" cy="92" r="10"/><path d="M90 92h12m-6-6v12"/>';
-    else shape = '<path d="M19 102 48 57l20 25 16-20 37 40M21 112h99M26 44h23M37 32v24"/><circle cx="98" cy="35" r="13"/>';
+    const shape = storySymbols[title] || '<path d="M19 102 48 57l20 25 16-20 37 40M21 112h99M26 44h23M37 32v24"/><circle cx="98" cy="35" r="13"/>';
     return `<svg viewBox="0 0 140 140" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">${shape}</svg>`;
   };
   const art = (story, n, extra = '') => `<div class="story-art ${extra}" aria-hidden="true"><span class="art-index">STORY / ${String(n + 1).padStart(2,'0')}</span><span class="art-sun"></span>${icon(story.title)}</div>`;
@@ -43,12 +63,12 @@
     return `<div class="country-impacts"><h3>各國後續發展</h3><dl>${items.map(x => `<div><dt>${esc(x.state)}</dt><dd>${esc(x.text)}</dd></div>`).join('')}</dl></div>`;
   };
   const renderSubsequentStories = entries => {
-    const items = arr(entries).filter(x => x && x.title && x.relation);
+    const items = arr(entries).filter(x => x && x.title && x.relation && x.storyId && findStory(x.storyId));
     if (!items.length) return '';
     return `<section class="subsequent" id="subsequent"><div class="section-label">FOLLOW THE THREAD / 沿著歷史往後看</div><h2>後續典故</h2><p>從這段歷史繼續延伸；每則關聯都說明兩者如何相連。</p><div class="subsequent-list">${items.map(x => {
       const internal = x.storyId && findStory(x.storyId);
       const url = sourceHref(x.source && x.source.url);
-      const title = internal ? `<a href="${href('story', internal.id)}">${esc(x.title)} ↗</a>` : url ? `<a href="${url}" target="_blank" rel="noopener noreferrer">${esc(x.title)} ↗</a>` : esc(x.title);
+      const title = `<a href="${href('story', internal.id)}">${esc(x.title)} ↗</a>`;
       const source = url ? `<a class="subsequent-source" href="${url}" target="_blank" rel="noopener noreferrer">查閱${esc(x.source.title || '資料來源')} ↗</a>` : '';
       return `<article class="subsequent-card"><h3>${title}</h3><p>${esc(x.relation)}</p>${source}</article>`;
     }).join('')}</div></section>`;
