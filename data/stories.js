@@ -16,11 +16,40 @@ window.HISTORY_DATA = {
       background: ['春秋前期，齊國公子小白與公子糾爭奪君位；鮑叔牙和管仲原分別輔佐不同的公子。'],
       narrative: ['《史記》記載，管仲早年與鮑叔牙交往，曾在經商與仕途遭遇困難，鮑叔牙仍理解他的處境。', '公子小白即位為齊桓公後，公子糾失敗，管仲被囚；鮑叔牙向桓公舉薦管仲，管仲因而得以施展才能。'],
       influence: ['《史記》將管仲輔政與齊桓公稱霸相連；後人以「管鮑之交」形容深厚而互相理解的友誼。', '這是司馬遷的敘事，史事成敗涉及多種因素，不宜全歸因於單一人物。'],
+      countryImpacts: [
+        {
+          "state": "齊國",
+          "text": "管仲受用後輔佐齊桓公推行治理、聯合諸侯；《史記》將齊桓公稱霸與管仲輔政相連。齊的地位上升並非只由兩人的交情決定。"
+        },
+        {
+          "state": "周王室與諸侯",
+          "text": "齊桓公以尊奉周王室的名義召集諸侯會盟，成為春秋早期的重要霸主；各諸侯國仍各自存在，並非由齊統一。"
+        }
+      ],
+      subsequentStories: [
+        {
+          "title": "九合一匡",
+          "relation": "後續政治脈絡：管仲輔佐齊桓公，多次會合諸侯、匡正天下的事蹟，後來凝練為這個典故。",
+          "source": {
+            "title": "教育部《成語典》：九合一匡",
+            "url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=19088&webMd=2"
+          }
+        },
+        {
+          "title": "老馬識途",
+          "relation": "同一君臣的後續故事：教育部《成語典》記載齊桓公與管仲出征時靠老馬辨路；它發生在同一政治背景，並非由友情直接造成。",
+          "source": {
+            "title": "教育部《成語典》：老馬識途",
+            "url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=36&webMd=2"
+          }
+        }
+      ],
       connections: [
         { id: 'wo-xin-chang-dan', relation: '主題對照：兩篇都涉及君主如何運用身邊的人才與長期謀劃，並無直接因果。' },
         { id: 'paper-strategy', relation: '主題對照：一篇講舉薦人才，另一篇提醒任用與實際能力之間的複雜性。' }
       ],
       sources: [
+        {"title": "教育部《成語典》：九合一匡", "url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=19088&webMd=2", "note": "齊桓公、管仲與諸侯會盟的傳統敘事。"},
         { title: '教育部《成語典》：管鮑之交', url: 'https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=10690&la=0&webMd=2', note: '說明管、鮑之交及其成語含義。' },
         { title: '《史記集解》卷六十二・管晏列傳', url: 'https://ctext.org/wiki.pl?chapter=809489&if=gb', note: '記載管鮑交往、舉薦管仲及其輔政。此頁為影印辨識文字，閱讀時宜留意字形。' }
       ]
@@ -32,11 +61,40 @@ window.HISTORY_DATA = {
       background: ['晉公子重耳流亡期間受到楚成王款待；《左傳》記載重耳表示，若兩國將來交戰，願先退避三舍。'],
       narrative: ['重耳後來回國即位，是為晉文公。晉、楚在城濮之戰前對峙時，晉軍依照先前的承諾後退。', '雙方最終在城濮交戰，晉軍取勝；「舍」為古代行軍距離單位，三舍常解釋為九十里。'],
       influence: ['城濮之戰後，晉文公的諸侯地位提高，晉楚之爭仍持續。', '後人用「退避三舍」比喻主動退讓或避免衝突；戰爭結果不能只用退兵一個決定解釋。'],
+      countryImpacts: [
+        {
+          "state": "晉國",
+          "text": "前 632 年城濮之戰取勝後，晉文公召集諸侯會盟，晉國的霸主地位上升。"
+        },
+        {
+          "state": "楚國",
+          "text": "楚軍在城濮受挫，但楚國並未退出列國競爭；其後晉楚仍持續角逐，楚莊王時期又展現向中原伸展的實力。"
+        }
+      ],
+      subsequentStories: [
+        {
+          "title": "問鼎輕重",
+          "relation": "較長的晉楚爭霸脈絡：城濮之戰後數十年，楚莊王問周王室鼎的大小輕重，呈現楚國後來的實力與野心；並非城濮戰敗單獨造成。",
+          "source": {
+            "title": "教育部《成語典》：問鼎輕重",
+            "url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=25718&la=0&webMd=2"
+          }
+        },
+        {
+          "title": "竭澤而漁",
+          "relation": "同一場戰爭的另一面：《呂氏春秋》以城濮之戰前的謀議與戰後論賞，說明權變和長遠治理；屬同戰役的平行敘事，並非戰勝後才發生。",
+          "source": {
+            "title": "教育部《成語典》：竭澤而漁",
+            "url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=10&la=0&webMd=2"
+          }
+        }
+      ],
       connections: [
         { id: 'surround-wei', relation: '主題對照：兩篇都可觀察如何調整行動方向與戰場態勢，並非相同戰役。' },
         { id: 'wo-xin-chang-dan', relation: '時代對照：前者反映中原晉楚爭霸，後者轉向春秋晚期的吳越競逐。' }
       ],
       sources: [
+        {"title": "教育部《成語典》：問鼎輕重", "url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=25718&la=0&webMd=2", "note": "楚莊王後來問鼎的記載，可對照楚國持續發展。"},
         { title: '教育部《成語典》：退避三舍', url: 'https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=104&la=0&webMd=2', note: '附《左傳》僖公二十三年典源與釋義。' },
         { title: '《左傳》僖公二十三年', url: 'https://ctext.org/chun-qiu-zuo-zhuan/xi-gong-er-shi-san-nian/zh', note: '重耳流亡到楚及退避承諾。' },
         { title: '《左傳》僖公二十八年', url: 'https://ctext.org/chun-qiu-zuo-zhuan/xi-gong-er-shi-ba-nian/zh', note: '城濮之戰的記載。' }
@@ -49,11 +107,37 @@ window.HISTORY_DATA = {
       background: ['春秋晚期，吳越相爭。勾踐遭吳軍擊敗，被困會稽，後向吳求和。'],
       narrative: ['《史記》記載勾踐回國後自苦，將膽懸置身旁，飲食時也嘗膽，以提醒自己不忘會稽之恥。', '經過多年內政經營與軍事角力，越國趁吳國國力受損多次進攻；前 473 年吳國滅亡。'],
       influence: ['後世以「臥薪嘗膽」形容刻苦自勵、等待時機；這是後來凝練的成語。', '這裡的《史記》原文有勾踐「嘗膽」，並未以同一段明說他「臥薪」；不宜把後世成語細節都當作當時確定事實。'],
+      countryImpacts: [
+        {
+          "state": "吳國",
+          "text": "吳越多年反覆交戰後，越於前 473 年滅吳，吳國政權終結；吳的衰敗涉及長期戰爭和國力消耗。"
+        },
+        {
+          "state": "越國",
+          "text": "《史記》記載越滅吳後，勾踐北上會見諸侯，聲勢提高；後續也有范蠡離去與文種遭疑的記載。"
+        },
+        {
+          "state": "楚國、宋國與魯國",
+          "text": "《史記》記載勾踐滅吳後調整各國的土地：楚得淮上之地，宋獲返先前失地，魯得泗東之地。這反映越國處理周邊關係的方式。"
+        }
+      ],
+      subsequentStories: [
+        {
+          "title": "鳥盡弓藏",
+          "relation": "越滅吳後的君臣關係：《史記》記載范蠡離越後寫信勸文種離開，以鳥盡、良弓被藏比喻功成後功臣可能不受重用。成語亦見其他文獻，並非只有這一來源。",
+          "source": {
+            "title": "教育部《成語典》：鳥盡弓藏",
+            "url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=28380&la=0&webMd=1"
+          }
+        }
+      ],
       connections: [
         { id: 'retreat-three-she', relation: '時代對照：由晉楚爭霸轉看春秋晚期的吳越競逐。' },
         { id: 'guan-bao-friendship', relation: '主題對照：兩篇都涉及君主與輔佐者；不代表兩事有直接因果。' }
       ],
       sources: [
+        {"title": "教育部《成語典》：鳥盡弓藏", "url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=28380&la=0&webMd=1", "note": "越滅吳後范蠡與文種的記載，亦列其他文獻版本。"},
+        {"title": "教育部《成語典》：臥薪嘗膽典源", "url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=125&webMd=2", "note": "所引《史記》包括越滅吳後北會諸侯及與楚、宋、魯的領地調整。"},
         { title: '教育部《成語典》：臥薪嘗膽', url: 'https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=198&la=0&webMd=2', note: '附《史記》嘗膽原文；成語典的典故說明包含後世對臥薪的敘述。' },
         { title: '《史記正義》卷四十一・越王勾踐世家', url: 'https://ctext.org/wiki.pl?chapter=180115&if=gb', note: '載會稽敗戰、嘗膽以及吳越之爭。' }
       ]
@@ -65,11 +149,37 @@ window.HISTORY_DATA = {
       background: ['戰國時期諸侯軍事競爭加劇，魏國進攻趙國，趙向齊國求援。'],
       narrative: ['《史記》記載，齊將田忌原想直接赴趙，孫臏建議避開魏軍主力，向魏國要地大梁的方向進軍。', '魏軍離開趙地回救，齊、魏在桂陵交戰，齊軍擊敗魏軍。事件年代在不同研究中可能略有出入。'],
       influence: ['「圍魏救趙」後來成為以攻擊對方要害，間接解除危機的戰略說法。', '同一人物孫臏後來也出現在齊魏馬陵之戰的記載中，但兩場戰役應分開理解。'],
+      countryImpacts: [
+        {
+          "state": "齊國",
+          "text": "齊軍在桂陵擊敗魏軍；其後齊、魏仍繼續競爭，孫臏與田忌又出現在後來馬陵之戰的記載中。"
+        },
+        {
+          "state": "魏國",
+          "text": "桂陵之敗使魏在這次軍事行動受挫，但魏並未立即滅亡或失去所有實力，日後仍能與齊作戰。"
+        },
+        {
+          "state": "趙國",
+          "text": "邯鄲曾遭魏攻占；戰事與談判後，魏歸還邯鄲並與趙和議。不可把桂陵戰果簡化成齊軍立刻解除圍困。"
+        }
+      ],
+      subsequentStories: [
+        {
+          "title": "因勢利導",
+          "relation": "後續齊魏戰爭：教育部《成語典》以孫臏在馬陵利用敵軍判斷、安排減灶為例說明因勢利導。馬陵發生在桂陵之後，是同一人物及齊魏競爭的延續，不是同一場戰役。",
+          "source": {
+            "title": "教育部《成語典》：因勢利導",
+            "url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=183&webMd=2"
+          }
+        }
+      ],
       connections: [
         { id: 'retreat-three-she', relation: '主題對照：皆有透過改變軍隊行動方向來影響戰局的敘事。' },
         { id: 'return-jade', relation: '歷史脈絡：兩篇都涉及趙國，分別呈現戰國中前期軍事與後來秦趙外交的不同處境。' }
       ],
       sources: [
+        {"title": "中央研究院歷史語言研究所：戰國七雄及其他小國", "url": "https://www11.ihp.sinica.edu.tw/storage/w2_file/3721NyMmhNa.pdf", "note": "戰國列國的發展，可對照齊、魏、趙後續局勢。"},
+        {"title": "教育部《成語典》：因勢利導", "url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=183&webMd=2", "note": "孫臏與後來馬陵之戰的敘事。"},
         { title: '教育部《成語典》：圍魏救趙', url: 'https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=17170&la=0&webMd=2', note: '說明齊、魏、趙關係，並指向《史記》出處。' },
         { title: '《史記》孫子吳起列傳・桂陵之戰', url: 'https://ctext.org/text.pl?if=gb&node=7424&show=parallel', note: '記載孫臏建議與桂陵之戰。' }
       ]
@@ -81,11 +191,41 @@ window.HISTORY_DATA = {
       background: ['《史記》記載，趙國得到和氏璧後，秦王提出用十五座城池交換。趙國擔心受騙，也憂慮拒絕會引來秦國攻擊。', '確切年代有不同推算；此處為方便整理依常見的約前 283 年說暫歸戰國中期，其他推算範圍可能跨到下一時期。'],
       narrative: ['趙國派藺相如攜璧赴秦。相如察覺秦王沒有真誠交城的跡象，設法取回和氏璧，並安排人秘密將璧送回趙國。', '相如留在秦廷應對，最後獲釋歸趙；《史記》記載秦沒有交城，趙也沒有交出和氏璧。'],
       influence: ['藺相如回國後受到任用；他與廉頗之間的衝突與和解，是同一列傳中後續的「負荊請罪」故事。', '典故常用來比喻把借來或受託保管的物品完整歸還。故事細節依《史記》敘事，並非當事人的逐字紀錄。'],
+      countryImpacts: [
+        {
+          "state": "趙國",
+          "text": "藺相如憑外交表現得到重用；《史記》記載他在後來澠池會後升為上卿，與廉頗的關係成為後續故事。"
+        },
+        {
+          "state": "秦國與趙國",
+          "text": "這次交涉沒有換城，也沒有永久解決秦趙對立。兩國後來仍多次交涉與交戰，長平之戰即發生在其後。"
+        }
+      ],
+      subsequentStories: [
+        {
+          "title": "負荊請罪",
+          "relation": "同一列傳的後續：藺相如在澠池會後位居廉頗之上，廉頗起初不服；理解相如顧全趙國後，負荊向他請罪。這是後續君臣關係的記載，不代表秦趙矛盾從此消失。",
+          "source": {
+            "title": "教育部《成語典》：負荊請罪",
+            "url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=46&q=1"
+          }
+        },
+        {
+          "title": "紙上談兵",
+          "relation": "同一秦趙競爭脈絡：數十年後，趙軍在長平遭秦重創。兩事先後相連，但不能把戰敗歸因於和氏璧外交。",
+          "storyId": "paper-strategy",
+          "source": {
+            "title": "教育部《成語典》：紙上談兵",
+            "url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=-50&la=0&webMd=2"
+          }
+        }
+      ],
       connections: [
         { id: 'paper-strategy', relation: '共同脈絡：兩篇同載《廉頗藺相如列傳》，都呈現秦趙關係；長平之戰發生於其後。' },
         { id: 'surround-wei', relation: '歷史脈絡：兩篇皆有趙國，但一篇是齊魏趙軍事攻防，一篇是秦趙外交。' }
       ],
       sources: [
+        {"title": "教育部《成語典》：負荊請罪", "url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=46&q=1", "note": "藺相如、廉頗和解與秦趙關係。"},
         { title: '教育部《成語典》：完璧歸趙', url: 'https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=-341&la=0&webMd=2', note: '收錄《史記》原文及典故說明。' },
         { title: '澳門教育及青年發展局教學資料', url: 'https://mirror1.dsedj.gov.mo/tplan/2019/plan/P118.pdf', note: '教材將所述史事放在前 283 至前 279 年；範圍跨本網站的分期界線。' },
         { title: '《史記》廉頗藺相如列傳', url: 'https://ctext.org/shiji/lian-po-lin-xiang-ru-lie-zhuan/zh', note: '記載完璧歸趙及其後秦趙衝突。' }
@@ -98,11 +238,46 @@ window.HISTORY_DATA = {
       background: ['秦趙為上黨與周邊地區爭奪，長平一帶形成長期對峙。趙將廉頗採取堅守策略，後來趙王改派趙括。'],
       narrative: ['《史記》說趙括熟讀兵書，卻不知因應變化；趙括之母曾向趙王表達擔憂。', '趙括接任後，秦將白起以佯退、切斷糧道等方式分割趙軍。趙括突圍時陣亡，趙軍在飢困後投降。'],
       influence: ['長平之敗使趙國遭受嚴重損失，秦趙實力對比受到影響；之後秦仍與趙等國持續征戰。', '「紙上談兵」常用來提醒不能只談理論而忽略情勢與實務；真實戰敗原因還涉及補給、決策和秦軍部署，不能簡化為一人不會打仗。'],
+      countryImpacts: [
+        {
+          "state": "趙國",
+          "text": "長平之戰使趙軍遭受重大損失；其後秦軍圍攻趙都邯鄲，趙國向外尋求援助。"
+        },
+        {
+          "state": "秦國",
+          "text": "秦軍獲得長平戰役的勝利，後續又進攻邯鄲；但在趙、魏、楚等力量抵抗下，邯鄲未被攻下。"
+        },
+        {
+          "state": "楚國與魏國",
+          "text": "《史記》記載趙國求援後，楚、魏出兵參與邯鄲之戰，顯示列國會為各自利益共同抵抗秦國。"
+        }
+      ],
+      subsequentStories: [
+        {
+          "title": "毛遂自薦",
+          "relation": "長平之戰之後的邯鄲之圍：趙國派平原君到楚國求援，門客毛遂主動要求同行並參與說服楚王出兵。這是後續戰爭脈絡，不是趙括個人直接產生的結果。",
+          "source": {
+            "title": "教育部《成語典》：毛遂自薦",
+            "url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=291&la=0&webMd=1"
+          }
+        },
+        {
+          "title": "竊符救趙",
+          "relation": "同一邯鄲之圍的另一條線：魏國信陵君取得兵符，率軍救援趙國。它與楚國援趙一起呈現多國參與的戰局。",
+          "source": {
+            "title": "教育部《成語典》：竊符救趙",
+            "url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=2347&la=0&webMd=2"
+          }
+        }
+      ],
       connections: [
         { id: 'return-jade', relation: '共同脈絡：兩篇同見《廉頗藺相如列傳》；從外交周旋接續觀察其後秦趙戰爭。' },
         { id: 'guan-bao-friendship', relation: '主題對照：對照舉薦人才與選將決策；兩件事相隔數百年，沒有直接因果。' }
       ],
       sources: [
+        {"title": "《史記》平原君虞卿列傳", "url": "https://ctext.org/shiji/ping-yuan-jun-yu-qing-lie-zhuan/zh", "note": "長平之後的邯鄲之圍與趙國向楚、魏求援。"},
+        {"title": "教育部《成語典》：毛遂自薦", "url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=291&la=0&webMd=1", "note": "邯鄲之圍、平原君赴楚與毛遂說楚。"},
+        {"title": "教育部《成語典》：竊符救趙", "url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=2347&la=0&webMd=2", "note": "魏國信陵君率軍救趙的敘事。"},
         { title: '教育部《成語典》：紙上談兵', url: 'https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=-50&la=0&webMd=2', note: '附《史記》長平之戰原文與成語說明。' },
         { title: '《史記》廉頗藺相如列傳', url: 'https://ctext.org/shiji/lian-po-lin-xiang-ru-lie-zhuan/zh', note: '記載趙括、廉頗及長平之戰。' },
         { title: '《史記》白起王翦列傳', url: 'https://ctext.org/shiji/bai-qi-wang-jian-lie-zhuan/zh', note: '補充秦軍與長平戰局。' }
